@@ -6,7 +6,6 @@ public class Rotator : MonoBehaviour
     
     private void Update()
     {
-        if (Input.GetKey(KeyCode.A)) transform.Rotate(new Vector3(0, 0, speed * Time.deltaTime));
-        if (Input.GetKey(KeyCode.D)) transform.Rotate(new Vector3(0, 0, -speed * Time.deltaTime));
+        transform.Rotate(new Vector3(0, 0, -1 * speed * Time.deltaTime * Input.GetAxis("Horizontal")));
     }
 }
